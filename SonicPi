@@ -1,0 +1,75 @@
+trance = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/TranceLoop.wav"
+kick = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/KickSnare.wav"
+snare = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/Snare.wav"
+bass = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/BassLoop.wav"
+mainvoc = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/MainVocals.wav"
+sixthvoc = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/SixthAdlib.wav"
+fifthvoc = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/FifthHighAdlib.wav"
+fourthvoc = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/FourthHighAdlib.wav"
+thirdvoc = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/ThirdHighAdlib.wav"
+secondvoc = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/SecondAdlib.wav"
+firstvoc = "C:/Users/giorg/Dropbox/My PC (LAPTOP-TUNCC3OD)/Downloads/Sonic Pi Samples/FirstAdlib.wav"
+
+use_bpm 120
+
+live_loop :first do
+  sample firstvoc, amp: 0
+  sleep 16
+end
+
+live_loop :second do
+  sample secondvoc, amp: 0
+  sleep 16
+end
+
+live_loop :mainvoc do
+  sample mainvoc, amp: 1
+  sleep 32
+end
+
+live_loop :third do
+  sample thirdvoc, amp: 0
+  sleep 16
+end
+
+live_loop :fourth do
+  sample fourthvoc, amp: 0
+  sleep 16
+end
+
+live_loop :five do
+  sample fifthvoc, amp: 0
+  sleep 16
+end
+
+live_loop :sixth do
+  sample sixthvoc, amp: 0
+  sleep 16
+end
+
+live_loop :bass do
+  sample bass, amp: 0
+  sleep 16
+end
+
+live_loop :trance do
+  sample trance, amp: 0
+  sleep 16
+end
+
+live_loop :snare do
+  sample snare, amp: 0
+  sleep 16
+end
+
+live_loop :kick do
+  sample kick, amp: 0
+  sleep 16
+end
+
+live_loop :hi do
+  sample :hat_cab, amp: 0
+  # sleep 1
+  #sleep (ring, 0.25, 0.25, 0.25, 0.25).tick
+  sleep (ring, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.125, 0.125, 0.125, 0.125, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25).tick
+end
